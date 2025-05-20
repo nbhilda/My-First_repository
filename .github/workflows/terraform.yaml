@@ -1,0 +1,14 @@
+name: Terraform.workaround
+on: push
+jobs: 
+    terraform:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+        
+            - name: setting up terraform 
+              uses: hashicorp/setup-terraform@v3
+              with:
+                 terraform_version: "1.1.7"    
+            
