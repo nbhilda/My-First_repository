@@ -3,7 +3,6 @@ provider "aws" {
   access_key = var.access_key
   secret_key = var.secret_key
 }
-
 terraform {
   backend "s3" {
     bucket = "awsclasses2024"
@@ -13,7 +12,6 @@ terraform {
     secret_key = var.secret_key
 }
   }
-
 
 variable "access_key" {
  type = string
