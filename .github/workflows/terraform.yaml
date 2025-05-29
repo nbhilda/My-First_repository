@@ -25,5 +25,8 @@ jobs:
               run:  terraform apply -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_secret_KEY }}" 
  
             - name : Terraform destroy
-              run:  terraform destroy -auto-approve"
+              run:  terraform apply -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_secret_KEY }}" 
+              
+    
+      
  
